@@ -1,78 +1,88 @@
-'use strict'
+"use strict";
 
-const path = require('path')
-const autoprefixer = require('autoprefixer')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const path = require("path");
+const autoprefixer = require("autoprefixer");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  entry: './src/js/main.js',
+  mode: "development",
+  entry: "./src/js/main.js",
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
   },
-  devServer:{
-    static: path.resolve(__dirname, 'dist'),
+  devServer: {
+    static: path.resolve(__dirname, "dist"),
     port: 8080,
-    hot: true
+    hot: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' },),
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/images', to: 'images' },
-      ]})
+        { from: "src/images", to: "images" },
+        { from: "src/favicon.ico", to: "." },
+      ],
+    }),
   ],
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.(scss)$/,
         use: [
           {
             // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+            loader: "style-loader",
           },
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
-            loader: 'css-loader'
+            loader: "css-loader",
           },
           {
             // Loader for webpack to process CSS with PostCSS
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [
-                  autoprefixer
-                ]
-              }
-            }
+                plugins: [autoprefixer],
+              },
+            },
           },
           {
             // Loads a SASS/SCSS file and compiles it to CSS
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               sassOptions: {
                 // Silence Sass deprecation warnings
                 silenceDeprecations: [
-                  'color-functions',
-                  'global-builtin',
-                  'import',
-                  'if-function',
-                ]
-              }
-            }
-          }
-        ]
+                  "color-functions",
+                  "global-builtin",
+                  "import",
+                  "if-function",
+                ],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'images/[name][ext]', // output folder
+          filename: "images/[name][ext]", // output folder
         },
-      }
-    ]
-  }
-}
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext]",
+        },
+      },
+    ],
+  },
+};

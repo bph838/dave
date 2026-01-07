@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -28,7 +27,11 @@
 $enable-gradients: true;
 $enable-shadows: true;
 
-$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+$font-family-sans-serif: "Times New Roman", "Dosis", "Helvetica Neue", Helvetica,
+  Arial, sans-serif;
+//$font-family-monospace: "Fira Code", monospace;
 
 // Include functions first
 @import "bootstrap/scss/functions";
@@ -36,7 +39,7 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 // Customize some defaults
 $body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
+$border-radius: 0.4rem;
 $success: #7952b3;
 
 // Required
@@ -58,8 +61,8 @@ $success: #7952b3;
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
@@ -68,30 +71,182 @@ $success: #7952b3;
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
+//@import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
+//@import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
+//@import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-
-
 //
 // Custom styles
 //
 
 @import "icon-list";
 
-body {
-  padding: 1.5rem;  
-  background-image: url('../images/logo.png');
+.navbar {
+  --bs-bg-opacity: 0.8;
+  .nav-link {
+    i {
+      display: block;
+      text-align: center;
+      font-size: 2rem !important;
+    }
+  }
+}
+
+.hero {
+  padding-top: 90px;
+  min-height: 80vh;
+  background: url("../images/hero-1920.jpg") center / cover no-repeat;
+
+  .container {
+    background-color: darkgrey;
+    opacity: 0.8;
+    h1 {
+      color: black;
+      font-size: 64px;
+      text-shadow: -2px 2px 3px white;
+    }
+  }
+}
+
+.siteSectionTop {
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+
+  .sectionImageWrapped {
+    float: left;
+    position: relative;
+  }
+  .sectionImage {
+    flex: 0 0 150px; // fixed width
+  }
+
+  .sectionText {
+    flex: 1;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  &::after {
+    content: ""; // required for pseudo-elements
+    display: block; // makes it appear like an <hr>
+    border-bottom: 1px solid #ccc; // color & thickness
+    margin: 20px 0; // spacing above & below
+  }
+}
+
+.siteSection {
+  @extend row !optional;
+
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    flex: 0 0 100%;
+  }
+
+  .sectionImageWrapped {
+    float: left;
+  }
+  @media (min-width: 700px) {
+    .sectionImage {
+      flex: 0 0 33%;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+  @media (max-width: 699px) {
+    .sectionImage {
+      display: none;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+  .sectionText {
+    flex: 1;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  &::after {
+    content: ""; // required for pseudo-elements
+    display: block; // makes it appear like an <hr>
+    border-bottom: 1px solid #ccc; // color & thickness
+    margin: 20px 0; // spacing above & below
+  }
+}
+
+#footer {
+  @extend row !optional;
+
+  background-color: #b9b9b9;
+
+  text-align: center;
+  color: #efefef;
+
+  .ftContact {
+    display: flex;
+
+    width: 100%;
+    padding: 1rem 4rem;
+    .ftPanel {
+      flex: 1;
+
+      h4 {
+        text-transform: uppercase;
+      }
+      a {
+        color: #efefef;
+      }
+      i {
+        margin-right: 0.3em;
+      }
+    }
+  }
+
+  @media (max-width: 699px) {
+    .ftContact {
+      flex-direction: column;
+    }
+  }
+
+  .ftCopyright {
+    display: flex;
+    background-color: #5e5e5e;
+    padding: 0.5rem 4rem;
+    text-align: center;
+    color: #efefef;
+    width: 100%;
+
+    p {
+      width: 100%;
+      font-size: 1.2em;
+    }
+  }
 }
