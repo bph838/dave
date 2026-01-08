@@ -29,10 +29,10 @@ $enable-shadows: true;
 
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
-$font-family-sans-serif: "Times New Roman", "Dosis", "Helvetica Neue", Helvetica,
-  Arial, sans-serif;
+$font-family-sans-serif: "Times New Roman", "Dosis", "Helvetica Neue", Helvetica,  Arial, sans-serif;
 //$font-family-monospace: "Fira Code", monospace;
 
+@import "./response.scss";
 // Include functions first
 @import "bootstrap/scss/functions";
 
@@ -119,25 +119,27 @@ $success: #7952b3;
   }
 }
 
-.sectionSizing{
- @media (min-width: 700px) {
+.sectionSizing {  
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  @include respond(tablet) {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+   @include respond(pc) {
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 1em;
     margin-bottom: 2em;
   }
-  @media (max-width: 699px) {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
 }
 
 .siteSectionTop {
- @extend .sectionSizing;
-
+  @extend .sectionSizing;
   .sectionImageWrapped {
     float: left;
     position: relative;
@@ -166,7 +168,6 @@ $success: #7952b3;
   @extend row !optional;
   @extend .sectionSizing;
 
- 
   display: flex;
   flex-wrap: wrap;
 
