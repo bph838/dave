@@ -7,7 +7,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import $ from "jquery";
 
-
 import {setupMenuCommands}  from "./menu/menu";
 import {setupCopyright} from "./ui/copyright";
 setupMenuCommands();

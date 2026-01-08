@@ -5,6 +5,8 @@ const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+const { SITE_TITLE } = require("./src/js/constants.js"); // works only if it's CommonJS
+
 module.exports = {
   mode: "development",
   entry: "./src/js/main.js",
@@ -18,7 +20,7 @@ module.exports = {
     hot: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new HtmlWebpackPlugin({ template: "./src/index.html", title: SITE_TITLE }),
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/images", to: "images" },

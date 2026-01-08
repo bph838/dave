@@ -6,6 +6,8 @@ const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const { SITE_TITLE } = require("./src/js/constants.js");
+
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === "production";
@@ -28,7 +30,7 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new HtmlWebpackPlugin({ template: "./src/index.html" }),
+      new HtmlWebpackPlugin({ template: "./src/index.html",title:SITE_TITLE }),
       new CopyWebpackPlugin({
         patterns: [
           { from: "src/images", to: "images" },
