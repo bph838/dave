@@ -7,49 +7,50 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import $ from "jquery";
 
-// Create an example popover
-document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
-  new Popover(popover);
-});
-
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const menu = e.currentTarget.dataset.menu;
-    let el = document.getElementById(menu);
-    scrollToElement(el);
-  });
-});
 
 const navLinks = document.querySelectorAll(".navbar .nav-link");
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.forEach((l) => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
-
 const navbarCollapseEl = document.querySelector(".navbar-collapse");
-
-// Get Collapse instance (or create one)
 const navbarCollapse = new Collapse(navbarCollapseEl, { toggle: false });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navbarCollapse.hide(); // closes the menu
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const menu = link.dataset.menu;
+    const el = document.getElementById(menu);
+    if (!el) return;
+
+    // Active state
+    navLinks.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+
+    // Close menu FIRST
+    navbarCollapse.hide();
+
+    // Wait for collapse animation to finish
+    setTimeout(() => {
+      scrollToElement(el);
+    }, 300); // Bootstrap collapse animation duration
   });
 });
 
-function scrollToElement(el, offset = 90) {
-  if (!el) {
-    console.log("el is null");
-    return;
-  }
-  const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-  window.scrollTo({ top: y, behavior: "smooth" });
+function scrollToElement(element) {
+  const header = document.querySelector(".navbar");
+  const offset = header?.offsetHeight || 0;
+
+  const y =
+    element.getBoundingClientRect().top +
+    window.pageYOffset -
+    offset;
+
+  window.scrollTo({
+    top: Math.max(0, y),
+    behavior: "smooth",
+  });
 }
 
+// Footer year
 const yearEl = document.getElementById("copyright-year");
-
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
