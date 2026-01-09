@@ -2,12 +2,15 @@
 import "../scss/styles.scss";
 
 // Import only the Bootstrap components we need
-import { Popover, Collapse } from "bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
+//import { Popover, Collapse } from "bootstrap";
+//import "bootstrap-icons/font/bootstrap-icons.css";
 
-import $ from "jquery";
+//import $ from "jquery";
 
-import {setupMenuCommands}  from "./menu/menu";
-import {setupCopyright} from "./ui/copyright";
-setupMenuCommands();
-setupCopyright('copyright-year');
+import { setupMenuCommands } from "./menu/menu";
+import { initCopyrightYear } from "./uiComponents/copyrightYear";
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupMenuCommands();
+  initCopyrightYear();
+});

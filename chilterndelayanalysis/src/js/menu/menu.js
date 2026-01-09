@@ -8,7 +8,7 @@
  */
 
 import { Collapse } from "bootstrap";
-import {scrollToElement}  from "../ui/scrolling";
+import {scrollToElement}  from "../uiComponents/scrolling";
 
 export function setupMenuCommands() {
   const navLinks = document.querySelectorAll(".navbar .nav-link");
