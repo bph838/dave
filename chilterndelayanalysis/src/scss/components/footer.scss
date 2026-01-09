@@ -1,0 +1,42 @@
+#footer {
+  @extend row !optional;
+
+  background-color: #b9b9b9;
+
+  text-align: center;
+  color: #efefef;
+
+  .ftContact {
+    display: flex;
+
+    width: 100%;
+    padding: 1rem 4rem;
+    .ftPanel {
+      flex: 1;
+
+      h4 {
+        text-transform: uppercase;
+      }
+      a {
+        color: #efefef;
+      }
+      i {
+        margin-right: 0.3em;
+      }
+    }
+  }
+
+  @media (max-width: 699px) {
+    .ftContact {
+      flex-direction: column;
+    }
+  }
+
+  .ftCopyright {
+    background-color: rgb(58, 58, 58);
+    padding: 1em;
+    p {
+      margin: 0;
+    }
+  }
+}

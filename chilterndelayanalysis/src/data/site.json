@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "title": "Baseline Programme Review",
+      "type": "wrappedTextLeft",
+      "image": "images/ChilternDelayAnalysis.png",
+      "id":"navBPR",
+      "iconClass":"bi bi-file-earmark-bar-graph-fill",
+      "text": [
+        "The baseline programme review provides our clients with an early appreciation of the acceptability and robustness of the contract programme. The baseline programme review is a process to review the proposed programme, focusing on whether it complies with the contractual requirements.",
+        "It will determine if the programme represents the ‘Works’ realistically and whether the planning and programming is deemed practical and complete.",
+        "We provide planning and programming specialists to review the merits of the baseline programme as a ‘statement of intent’ and to assess any risk associated with the baseline programme not being compliant.",
+        "The baseline programme review process includes various tasks to ensure the programme complies with the contract requirements. These tasks involve a review of the proposed contract programme, a review of project documentation and follow-up actions, as necessary, to satisfy the project parties that the baseline programme is valid.",
+        "The baseline programme review will use network-based techniques to identify the critical path(s) and assess whether the programme meets recognised good practice; e.g. identifying missing logic and highlighting the potential over-use of date constraints and excessive or forced float.",
+        "It can also be used to review the proposed methodology used to measure contract performance and progress and to determine if processes and systems are structured to enable the accurate recording of progress and change.",
+        ""
+      ]
+    },
+    {
+      "title": "Dispute Avoidance",
+      "type": "leftImage",
+      "image": "images/DisputeAvoidance.jpg",
+      "id":"navDA",
+      "iconClass":"bi bi-exclamation-lg",
+      "text": [
+        "Dispute avoidance should be a fundamental objective of all parties involved in construction and engineering. Achieving this goal requires awareness, good communication and accurate record keeping. Potential disputes need to be identified, addressed and resolved at the earliest opportunity.",
+        "Without such a strategy, the inevitable consequences are time consuming and expensive disputes.",
+        "We provide bespoke solutions to suit individual business needs, implement systems and processes that provide a robust and measurable baseline programme which can then be used to accurately track the impact of change through the course of the project.",
+        "Dispute avoidance can be achieved by the early implementation of appropriate project controls and monitoring procedures, thus avoiding the considerable time, expense and inconvenience of preparing or defending claims in legal proceedings."
+      ]
+    },
+    {
+      "title": "Project Audit",
+      "type": "rightImage",
+      "image": "images/ProjectAudit.jpg",
+      "id":"navPA",
+      "iconClass":"bi bi-bar-chart-line-fill",
+      "text": [
+        "A project audit is an interim assessment of project progress in relation to an agreed baseline programme. An audit enables the early identification of programme delays and highlights the potential risks in respect of time to the successful delivery of the project.",
+        "The audit will assess the criticality of delays and provide the opportunity to avoid formal disputes.",
+        "We provide an independent peer review of project status as an alternative to the reported status prepared for clients by their project advisers and contractors.",
+        "Delay Analysis staff use the experience and forensic techniques gained from managing disputes to carry out accurate and efficient audits. Chiltern Delay Analysis will recommend strategies that, when implemented, will establish the necessary controls to produce high level reviews on a regular basis which often proves invaluable in avoiding disputes."
+      ]
+    },
+    {
+      "title": "Claim Preparation and Defence",
+      "type": "noImage",
+      "id":"navCPaD",
+      "iconClass":"bi bi-award-fill",
+      "text": [
+        "Chiltern Delay Analysis’ industry knowledge, expertise and its thorough understanding of the legal processes involved in claims and litigation, assists our forensic planning experts in the production and defence of claims for recovery of delays and the loss and expense that commonly follow the delaying events.",
+        "We provide planning and programming specialists to review the merits of the baseline programme as a ‘statement of intent’ and to assess any risk associated with the baseline programme not being compliant.",
+        "The baseline programme review process includes various tasks to ensure the programme complies with the contract requirements. These tasks involve a review of the proposed contract programme, a review of project documentation and follow-up actions, as necessary, to satisfy the project parties that the baseline programme is valid.",
+        "The baseline programme review will use network-based techniques to identify the critical path(s) and assess whether the programme meets recognised good practice; e.g. identifying missing logic and highlighting the potential over-use of date constraints and excessive or forced float.",
+        "It can also be used to review the proposed methodology used to measure contract performance and progress and to determine if processes and systems are structured to enable the accurate recording of progress and change."
+      ]
+    }
+  ]
+}
