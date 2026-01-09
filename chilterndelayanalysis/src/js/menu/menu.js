@@ -37,5 +37,5 @@ export function setupMenuCommands() {
         scrollToElement(el);
       }, 300); // Bootstrap collapse animation duration
     });
-  });
+  }); 
 }

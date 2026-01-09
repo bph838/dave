@@ -3,7 +3,7 @@ import "../scss/styles.scss";
 
 // Import only the Bootstrap components we need
 //import { Popover, Collapse } from "bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
+//import "bootstrap-icons/font/bootstrap-icons.css";
 
 //import $ from "jquery";
 
@@ -16,12 +16,16 @@ import { renderSections } from "./components/page";
 const elNav = document.getElementById("topNav");
 if (elNav) {  
   console.log(data);
-  renderNavigation(elNav,data);    
-  
+  renderNavigation(elNav,data);      
 }
 
 document.addEventListener("DOMContentLoaded", () => {  
   setupMenuCommands();
   renderSections(data);
   initCopyrightYear();
+
+  const el1 = document.getElementById("topNav");
+  el1.style.display = "block"; 
+  const el2 = document.getElementById("footer");
+  el2.style.display = "block"; 
 });

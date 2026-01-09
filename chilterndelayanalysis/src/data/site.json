@@ -5,7 +5,7 @@
       "type": "wrappedTextLeft",
       "image": "images/ChilternDelayAnalysis.png",
       "id":"navBPR",
-      "iconClass":"bi bi-file-earmark-bar-graph-fill",
+      "iconClass":"fa-solid fa-home",
       "text": [
         "The baseline programme review provides our clients with an early appreciation of the acceptability and robustness of the contract programme. The baseline programme review is a process to review the proposed programme, focusing on whether it complies with the contractual requirements.",
         "It will determine if the programme represents the ‘Works’ realistically and whether the planning and programming is deemed practical and complete.",
@@ -21,7 +21,7 @@
       "type": "leftImage",
       "image": "images/DisputeAvoidance.jpg",
       "id":"navDA",
-      "iconClass":"bi bi-exclamation-lg",
+      "iconClass":"fa-solid fa-exclamation",
       "text": [
         "Dispute avoidance should be a fundamental objective of all parties involved in construction and engineering. Achieving this goal requires awareness, good communication and accurate record keeping. Potential disputes need to be identified, addressed and resolved at the earliest opportunity.",
         "Without such a strategy, the inevitable consequences are time consuming and expensive disputes.",
@@ -34,7 +34,7 @@
       "type": "rightImage",
       "image": "images/ProjectAudit.jpg",
       "id":"navPA",
-      "iconClass":"bi bi-bar-chart-line-fill",
+      "iconClass":"fa-solid fa-chart-column",
       "text": [
         "A project audit is an interim assessment of project progress in relation to an agreed baseline programme. An audit enables the early identification of programme delays and highlights the potential risks in respect of time to the successful delivery of the project.",
         "The audit will assess the criticality of delays and provide the opportunity to avoid formal disputes.",
@@ -46,7 +46,7 @@
       "title": "Claim Preparation and Defence",
       "type": "noImage",
       "id":"navCPaD",
-      "iconClass":"bi bi-award-fill",
+      "iconClass":"fa-solid fa-scale-unbalanced",
       "text": [
         "Chiltern Delay Analysis’ industry knowledge, expertise and its thorough understanding of the legal processes involved in claims and litigation, assists our forensic planning experts in the production and defence of claims for recovery of delays and the loss and expense that commonly follow the delaying events.",
         "We provide planning and programming specialists to review the merits of the baseline programme as a ‘statement of intent’ and to assess any risk associated with the baseline programme not being compliant.",

@@ -1,8 +1,9 @@
 .navbar {
+
   @extend .navbar-expand-lg;
   @extend .bg-body-tertiary;
   @extend .fixed-top;
-
+  
   --bs-bg-opacity: 0.8;
   .nav-link {
     i {
