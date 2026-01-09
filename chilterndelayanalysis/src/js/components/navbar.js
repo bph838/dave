@@ -13,7 +13,7 @@ export function renderNavigation(elNav, data) {
 
   const navBarList = document.createElement("ul");
   navBarList.className = "navbar-nav";
-  navContainer.appendChild(navBarList);
+  navBarContainer.appendChild(navBarList);
 
   data.sections.forEach((item) => {
     console.log(item);
@@ -50,7 +50,7 @@ function renderNavBarItem(el, item) {
     const navBarLink = document.createElement("a");
     navBarLink.className = "nav-link active";
     navBarLink.setAttribute("aria-current", "page");
-    navBarLink.href = "#";
+    navBarLink.setAttribute("href", "#");    
     navBarLink.setAttribute("data-menu", item.id);
 
     if (item.iconClass) {

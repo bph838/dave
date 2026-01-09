@@ -15,3 +15,13 @@
     }
   }
 }
+
+.collapsed-text {
+  display: none;
+  @media (max-width: 991px) {
+    // match your navbar collapse breakpoint
+    display: inline; // show on mobile / collapsed
+    font-size: 0.9rem;
+    color: #555;
+  }
+}

@@ -17,10 +17,11 @@ const elNav = document.getElementById("topNav");
 if (elNav) {  
   console.log(data);
   renderNavigation(elNav,data);    
-  setupMenuCommands();
+  
 }
 
 document.addEventListener("DOMContentLoaded", () => {  
+  setupMenuCommands();
   renderSections(data);
   initCopyrightYear();
 });

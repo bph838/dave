@@ -16,7 +16,7 @@ export function renderSection(sectionsDiv, data) {
     }
   }
 
-  const pageSection = renderSectionHolder(sectionsDiv);
+  const pageSection = renderSectionHolder(sectionsDiv, data.id);
 
   //if there is a title lets render it
   if (data.title) {
@@ -48,9 +48,12 @@ export function renderSection(sectionsDiv, data) {
   }
 }
 
-function renderSectionHolder(sectionsDiv) {
+function renderSectionHolder(sectionsDiv, id = null) {
   const pageSection = document.createElement("section");
   pageSection.className = "section";
+  if (id) {
+    pageSection.id = id;
+  }
   sectionsDiv.appendChild(pageSection);
 
   const pageSectionFlexDiv = document.createElement("div");
@@ -119,7 +122,6 @@ function renderSectionRightImage(pageSection, data) {
   pageSection.style.display = "flex";
   // Optionally, you can add other flex properties
   pageSection.style.flexDirection = "row"; // or "column"
- 
 
   const sectionTextDiv = document.createElement("div");
   sectionTextDiv.className = "sectionTextDiv";
@@ -136,7 +138,6 @@ function renderSectionRightImage(pageSection, data) {
   const sectionImage = document.createElement("img");
   sectionImage.src = data.image;
   sectionImageDiv.appendChild(sectionImage);
-
 }
 
 function renderSectionNoImage(pageSection, data) {
@@ -145,9 +146,8 @@ function renderSectionNoImage(pageSection, data) {
     return;
   }
 
-  pageSection.style.display = "flex";  
+  pageSection.style.display = "flex";
   pageSection.style.flexDirection = "row"; // or "column"
- 
 
   const sectionTextDiv = document.createElement("div");
   sectionTextDiv.className = "sectionTextDiv";
@@ -156,7 +156,6 @@ function renderSectionNoImage(pageSection, data) {
   data.text.forEach((text) => {
     renderSectionText(sectionTextDiv, text);
   });
-
 }
 
 function renderSectionText(pageSection, text) {

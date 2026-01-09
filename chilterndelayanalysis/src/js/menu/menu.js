@@ -8,9 +8,10 @@
  */
 
 import { Collapse } from "bootstrap";
-import {scrollToElement}  from "../components/scrolling";
+import { scrollToElement } from "../components/scrolling";
 
 export function setupMenuCommands() {
+  console.log("setupMenuCommands");
   const navLinks = document.querySelectorAll(".navbar .nav-link");
   const navbarCollapseEl = document.querySelector(".navbar-collapse");
   const navbarCollapse = new Collapse(navbarCollapseEl, { toggle: false });
